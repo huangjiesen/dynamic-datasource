@@ -69,3 +69,5 @@ DS_THREE数据源就失效了, 下一次再查询的时候依然会使用DS_TWO�
 如果Service方法使用了`@Transactional`注解, 后续手动设置的数据源以及其他方法使用`@DataSource`配置的数据源都将不会生效.
 如果方法内要操作多个数据源, 就不能使用`@Transactional`注解.
 
+#### 5.默认数据源
+未使用`@DataSource`注解的`Service`方法、将使用默认的数据源`DS_ONE`
