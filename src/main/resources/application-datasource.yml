@@ -1,0 +1,53 @@
+db:
+  source:
+    db1: #数据源1 连接test1
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test1
+      username: root
+      password: 123456
+      filters: wall
+      initialSize: 1
+      maxActive: 5
+      maxPoolPreparedStatementPerConnectionSize: 5
+      maxWait: 60000
+      minEvictableIdleTimeMillis: 300000
+      poolPreparedStatements: true
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      validationQuery: "SELECT 'x'"
+    db2: #数据源2 连接test2
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test2
+      username: root
+      password: 123456
+      filters: wall
+      initialSize: 1
+      maxActive: 5
+      maxPoolPreparedStatementPerConnectionSize: 5
+      maxWait: 60000
+      minEvictableIdleTimeMillis: 300000
+      poolPreparedStatements: true
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      validationQuery: "SELECT 'x'"
+    db3: #数据源3 连接test3
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test3
+      username: root
+      password: 123456
+      filters: wall
+      initialSize: 1
+      maxActive: 5
+      maxPoolPreparedStatementPerConnectionSize: 5
+      maxWait: 60000
+      minEvictableIdleTimeMillis: 300000
+      poolPreparedStatements: true
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      validationQuery: "SELECT 'x'"
