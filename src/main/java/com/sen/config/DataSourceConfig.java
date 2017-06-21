@@ -63,7 +63,6 @@ public class DataSourceConfig {
         return new DruidDataSource();
     }
 
-
     @Bean(name = "dynamicDataSource")
     public AbstractRoutingDataSource dynamicDataSource(
             @Qualifier(DS_ONE) DataSource dsOne,
