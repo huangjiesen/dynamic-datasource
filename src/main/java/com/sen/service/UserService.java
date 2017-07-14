@@ -33,14 +33,25 @@ public class UserService {
 
 
     public boolean insert(User user) {
+        // 插入数据库test1
         if(userDao.insert(user)!=1){
             return false;
         }
+
+        //
+        // 切换数据源、向数据库test2插入数据
+        // 修改age为28、以便观察数据
+        //
         user.setAge(28);
         DataSourceContextHolder.setDataSource(DataSourceConfig.DS_TWO);
         if(userDao.insert(user)!=1){
             return false;
         }
+
+        //
+        // 切换数据源、向数据库test3插入数据
+        // 修改age为38、以便观察数据
+        //
         user.setAge(38);
         DataSourceContextHolder.setDataSource(DataSourceConfig.DS_THREE);
         return userDao.insert(user)==1;
